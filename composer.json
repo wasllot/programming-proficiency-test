@@ -1,12 +1,18 @@
 {
     "name": "hommingcom/programming-proficiency-test",
     "type": "project",
-    "require": {
+    "require": {},
+    "require-dev": {
         "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "Hommingcom\\ProgrammingProficiencyTest\\": "src/"
+            "Homming\\ProficiencyTest\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/php/"
         }
     }
 }
