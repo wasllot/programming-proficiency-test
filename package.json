@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "node_modules/.bin/vue-cli-service serve resources/main.js",
     "build": "node_modules/.bin/vue-cli-service build resources/main.js",
-    "test:unit": "node_modules/.bin/vue-cli-service test:unit",
+    "test:unit": "jest",
     "lint": "node_modules/.bin/vue-cli-service lint resources"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "chokidar": "^3.5.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",

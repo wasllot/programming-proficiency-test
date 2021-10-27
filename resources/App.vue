@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { users, propertyTypes, properties } from './libs/api';
+import { users, propertyTypes, properties } from '@/libs/api';
 
 export default {
   name: 'App',
