@@ -2,18 +2,8 @@
 
 namespace App;
 
-/*
- *
- *
- *
- */
 class ArabicToRoman
 {
-    /*
-     *
-     *
-     *
-     */
     public static function transform(int $arabicNumber): string
     {
         $romanNumber = '';
