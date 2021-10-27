@@ -26,7 +26,7 @@ Your workspace is `resources` and your tests live in `tests/js`, appart from tha
  - Add extra columns to the properties table including months the property has been rented for and a boolean expresing if the property is currently being rented out
  - Be able to filter by property types, user and dates
  - (Optional) Listen to URL parameters to filter on page load. e.g. `?user=1`
- - (Optional) Use TailwindCSS to style your stuff properly.
+ - (Optional) Install and use TailwindCSS to style your stuff properly.
 
 You can check your work running `docker-compose exec app npm run serve` and accessing your `localhost:8080`.
 
