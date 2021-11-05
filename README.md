@@ -1,6 +1,6 @@
 # HOMMING PROGRAMMING PROFICIENCY TEST (HPPT)
 
-Welcome challenger to the ~~HTTP~~ HPPT, we are going to test your proficiency as a programmer! ʕ ᓀ ᴥ ᓂ ʔ
+**WELCOME CHALLENGER** to the ~~HTTP~~ HPPT, we are going to test your proficiency as a programmer! ʕ ᓀ ᴥ ᓂ ʔ
 
 > **DISCLAIMER:** Make the code to do what you want is only the first step, we expect elegant and optimal solutions since the problems are not challenging!
 
@@ -32,6 +32,6 @@ You can check your work running `docker-compose exec app npm run serve` and acce
 
 ## HOW TO HAND IN YOUR WORK
 
-Please, upload this code to a new private repository in your GitHub and invite `asurcodes` and `davidglezmartin` to check it out.
+Please, fork this repository and submit a Pull Request with your solutions so we can check it out.
 
-BEST OF LUCK CHALLENGER.
+**BEST OF LUCK CHALLENGER.**
