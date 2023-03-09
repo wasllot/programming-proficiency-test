@@ -1,10 +1,20 @@
-FROM php:8-alpine
+FROM php:8.2-alpine
 
 # Essentials
 RUN echo "UTC" > /etc/timezone
-RUN apk add --no-cache zip unzip curl
 
 RUN apk add --no-cache \
+  libressl \
+  autoconf \
+  gcc \
+  g++ \
+  libtool \
+  make \
+  git \
+  zip \
+  unzip \
+  curl \
+  python3 \
   nodejs \
   npm
 
