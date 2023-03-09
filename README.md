@@ -8,13 +8,15 @@
 
 You will find a dockerfile and a docker-compose.yml in your project root, that can only mean one thing... a dockerized project! So you may have guess the first step of this test already. Set it up and running!
 
+> ⚠️ **WARNING** ⚠️ Remember your dependencies, don't expect your project to run without you libraries installed in the container, they wouldn't do the same to you.
+
 ## PHP
 
 The backend part is more logic oriented, nothing pragmatic, unless you really like roman numbers for some reason...
 
-You have a `src` folder with multiple files, each of them contains a function. You need to complete that function with the logic necessary to pass the tests.
+You have a `src` folder with multiple files, each of them contains a function. You need to complete that function with the logic necessary to pass the tests. **You have complete control over the content of each function but not the parameters**. Take into consideration the optimization and DX of these exercises, imagine you have 1 million recipes, or that you have to parse an absurd amount of numbers and you will need to mantain that code often.
 
-You can check your logic running `docker-compose exec app php vendor/bin/phpunit`.
+You can check your logic running `docker compose exec app php vendor/bin/phpunit`.
 
 ## JAVASCRIPT
 
@@ -28,7 +30,7 @@ Your workspace is `resources` and your tests live in `tests/js`, appart from tha
  - (Optional) Listen to URL parameters to filter on page load. e.g. `?user=1`
  - (Optional) Install and use TailwindCSS to style your stuff properly.
 
-You can check your work running `docker-compose exec app npm run serve` and accessing your `localhost:8080`.
+You can check your work running `docker compose exec app npm run serve` and accessing your `localhost:8080`.
 
 ## HOW TO HAND IN YOUR WORK
 
