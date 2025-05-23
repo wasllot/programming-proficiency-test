@@ -1,10 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App;
 
-class ArabicToRoman
+final class ArabicToRoman
 {
-    // Definición de los valores romanos como constantes
     private const ROMAN_NUMERALS = [
         1000 => 'M',
         900 => 'CM',
@@ -21,34 +22,25 @@ class ArabicToRoman
         1 => 'I'
     ];
 
-    /**
-     * Receive an arabic number and return a string with its roman counterpart
-     *
-     * @param int $arabicNumber Arabic number to be transformed (e.g. 121)
-     *
-     * @return string The roman number equivalent (e.g. CXXI)
-     * @throws InvalidArgumentException if the number is out of range
-     */
     public static function transform(int $arabicNumber): string
     {
-        // Validar el rango del número arábigo
-        if ($arabicNumber < 1 || $arabicNumber > 3999) {
-            throw new \InvalidArgumentException("The number must be between 1 and 3999.");
-        }
+        return match (true) {
+            $arabicNumber < 1 || $arabicNumber > 3999 => throw new \InvalidArgumentException(
+                "The number must be between 1 and 3999."
+            ),
+            default => self::convertToRoman($arabicNumber)
+        };
+    }
 
-        $romanNumber = '';
-
-        // Iterar sobre los valores romanos
-        foreach (self::ROMAN_NUMERALS as $value => $symbol) {
-            // Mientras el número arábigo sea mayor o igual al valor
-            while ($arabicNumber >= $value) {
-                // Concatenar el símbolo romano
-                $romanNumber .= $symbol;
-                // Restar el valor del número arábigo
-                $arabicNumber -= $value;
-            }
-        }
-
-        return $romanNumber;
+    private static function convertToRoman(int $number): string
+    {
+        return array_reduce(
+            array_keys(self::ROMAN_NUMERALS),
+            fn(string $result, int $value): string => $result . str_repeat(
+                self::ROMAN_NUMERALS[$value],
+                ($count = intdiv($number, $value)) && ($number %= $value) ? $count : 0
+            ),
+            ''
+        );
     }
 }
